@@ -28,6 +28,8 @@ class Ball extends StatefulWidget {
 }
 
 class _BallState extends State<Ball> {
+  int ballNumber = 1;
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -35,7 +37,7 @@ class _BallState extends State<Ball> {
         onPressed: () {
           print('I got clicked');
         },
-        child: Image.asset('images/ball1.png'),
+        child: Image.asset('images/ball$ballNumber.png'),
       ),
     );
   }
