@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -35,7 +36,8 @@ class _BallState extends State<Ball> {
     return Center(
       child: FlatButton(
         onPressed: () {
-          print('I got clicked');
+          ballNumber = Random().nextInt(5);
+          print(ballNumber);
         },
         child: Image.asset('images/ball$ballNumber.png'),
       ),
